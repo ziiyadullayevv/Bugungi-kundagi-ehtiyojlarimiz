@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yordam va Maslahatlar</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f4f6f9; color: #333; }
+        main { max-width: 850px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); }
+        h1 { color: #1a202c; border-bottom: 3px solid #3182ce; padding-bottom: 12px; text-align: center; }
+        h2 { color: #2b6cb0; font-size: 20px; margin-top: 30px; }
+        
+        /* Qidiruv paneli uslubi */
+        .search-container { margin: 25px 0; text-align: center; }
+        .search-box { width: 80%; padding: 12px 20px; border: 2px solid #3182ce; border-radius: 25px; font-size: 16px; outline: none; box-sizing: border-box; }
+        
+        details { background: #f7fafc; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 1px solid #e2e8f0; }
+        summary { font-weight: bold; color: #2b6cb0; cursor: pointer; }
+        
+        /* Foydalanuvchi o'zi yozadigan qism */
+        .user-question-box { background: #f8fafc; border: 1px dashed #3182ce; padding: 25px; border-radius: 8px; margin-top: 35px; }
+        .user-question-box textarea { width: 100%; height: 100px; padding: 12px; border: 1px solid #cbd5e0; border-radius: 6px; box-sizing: border-box; font-size: 15px; resize: vertical; margin-top: 10px; }
+        .btn-submit { background: #3182ce; color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: bold; margin-top: 10px; }
+        .btn-submit:hover { background: #2b6cb0; }
+        
+        .help-box { background-color: #f0fff4; border-left: 4px solid #38a169; padding: 15px; border-radius: 4px; margin-top: 30px; }
+        nav { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; text-align: center; }
+        nav a { color: #3182ce; text-decoration: none; font-weight: bold; margin: 0 10px; }
+        nav a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Yordam va Tez-tez beriladigan savollar (FAQ)</h1>
+        <p style="text-align: center;">O'zingizni qiziqtirgan muammoni qidiring yoki pastda o'z savolingizni yozib qoldiring.</p>
+
+        <!-- 1. Foydalanuvchi o'zi yozib qidiradigan joy (Search bar) -->
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Muammoni yoki kalit so'zni shu yerga yozib qidiring...">
+        </div>
+
+        <h2>Tayyor tavsiyalar va savollar:</h2>
+
+        <details>
+            <summary>Bolani telefondan qanday uzoqlashtirish mumkin?</summary>
+            <p>Taqqiqlash o'rniga muqobil taklif qiling: uni qiziqarli sport to'garaklariga bering, birgalikda kitob o'qing yoki stol o'yinlarini o'ynang. Eng muhimi, o'zingiz ham u bilan ko'proq vaqt o'tkazing.</p>
+        </details>
+
+        <details>
+            <summary>"Raqamli detoks" nima va u nega kerak?</summary>
+            <p>Raqamli detoks — ma'lum vaqt davomida barcha gadjetlar va internetdan butunlay voz kechishdir. Bu miyani dam oldirish va ruhiy tetiklikni tiklash uchun juda foydali.</p>
+        </details>
+
+        <details>
+            <summary>Kuniga necha soat ekranga tikilish xavfsiz?</summary>
+            <p>Kattalar uchun ishdan tashqari vaqtda 2 soatgacha, maktab yoshidagi bolalar uchun esa kuniga 1 soatdan oshmasligi tavsiya etiladi. 2 yoshgacha bo'lgan bolalarga esa telefon berish umuman tavsiya etilmaydi.</p>
+        </details>
+
+        <!-- 2. Foydalanuvchi o'z muammosini shaxsan yozishi uchun joy -->
+        <div class="user-question-box">
+            <h3>Siz qidirgan ma'lumot topilmadimi?</h3>
+            <p>O'zingizni qiynayotgan yoki sahifada ko'rishni istagan muammoni batafsil yozib qoldiring. Mutaxassislarimiz tez orada sizga yordam berishadi:</p>
+            <form action="#" method="POST">
+                <textarea placeholder="Bu yerga o'z muammoingiz yoki savolingizni yozing..."></textarea>
+                <button type="submit" class="btn-submit">Savolni yuborish</button>
+            </form>
+        </div>
+
+        <div class="help-box">
+            <strong>📋 Muhim eslatma:</strong> Qaramlik kuchayib, bolada agressiya yoki qattiq uyqusizlik kuzatilsa, bolalar psixologi yoki nevrolog mutaxassisiga murojaat qilish tavsiya etiladi.
+        </div>
+
+        <nav>
+            <a href="Asosiy sahifa.html">Asosiy sahifa</a>
+            <a href="Yordam.html">Yordam</a>
+            <a href="Bizga murojaat qilish.html">Bizga murojaat qilish</a>
+        </nav>
+    </main>
+
+</body>
+</html>
+

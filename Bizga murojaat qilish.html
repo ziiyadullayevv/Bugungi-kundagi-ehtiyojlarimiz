@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizga murojaat qilish</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f4f6f9; color: #333; }
+        main { max-width: 600px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); }
+        h1 { color: #1a202c; border-bottom: 3px solid #3182ce; padding-bottom: 12px; text-align: center; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #4a5568; }
+        
+        /* Inputlar, select menyu va textarea uslublari */
+        input[type="text"], input[type="email"], select, textarea { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #cbd5e0; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            font-size: 15px;
+            background-color: #fff;
+        }
+        textarea { height: 120px; resize: vertical; }
+        
+        button { background: #3182ce; color: white; padding: 12px 20px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold; width: 100%; }
+        button:hover { background: #2b6cb0; }
+        
+        nav { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; text-align: center; }
+        nav a { color: #3182ce; text-decoration: none; font-weight: bold; margin: 0 10px; }
+        nav a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Bizga murojaat qilish</h1>
+        <p style="text-align: center; color: #718096; margin-bottom: 25px;">Murojaat qoldirish uchun quyidagi formalarni to'ldiring.</p>
+
+        <!-- Murojaat formasi -->
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="name">Ismingiz va Familiyangiz:</label>
+                <input type="text" id="name" placeholder="Ism va familiyangizni kiriting" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Elektron pochta manzilingiz:</label>
+                <input type="email" id="email" placeholder="example@mail.com" required>
+            </div>
+
+            <!-- Yangi qo'shilgan: Murojaat maqsadi -->
+            <div class="form-group">
+                <label for="purpose">Murojaat qilishdan maqsad:</label>
+                <select id="purpose" required>
+                    <option value="" disabled selected>Maqsadni tanlang...</option>
+                    <option value="question">Mavzu yuzasidan savol berish</option>
+                    <option value="suggestion">Saytni rivojlantirish bo'yicha taklif</option>
+                    <option value="problem">Saytdagi texnik xatolik yoki muammo</option>
+                    <option value="cooperation">Hamkorlik yoki loyihada qatnashish</option>
+                    <option value="other">Boshqa masalalar</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Murojaat matni:</label>
+                <textarea id="message" placeholder="Xabaringizni to'liq va batafsil shu yerga yozing..." required></textarea>
+            </div>
+
+            <button type="submit">Murojaatni yuborish</button>
+        </form>
+
+        <nav>
+            <a href="Asosiy sahifa.html">Asosiy sahifa</a>
+            <a href="Yordam.html">Yordam</a>
+            <a href="Bizga murojaat qilish.html">Bizga murojaat qilish</a>
+        </nav>
+    </main>
+
+    <!-- Tugma bosilganda ishlaydigan interaktiv qism -->
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Sahifa qayta yuklanishini oldini oladi
+            
+            // Kiritilgan ma'lumotlarni olish
+            const name = document.getElementById('name').value;
+            const purposeSelect = document.getElementById('purpose');
+            const purposeText = purposeSelect.options[purposeSelect.selectedIndex].text;
+
+            // Foydalanuvchiga bildirishnoma ko'rsatish
+            alert(`Rahmat, ${name}!\nSizning "${purposeText}" yo'nalishidagi murojaatingiz muvaffaqiyatli qabul qilindi.`);
+            
+            // Formani tozalash
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+
+</body>
+</html>
